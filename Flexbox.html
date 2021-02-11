@@ -1,0 +1,59 @@
+<!--Alec Wick-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HTML Details -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width-device-width,initial-scale-1.0">
+  <title>CSS Flexbox Activity</title>
+  <link rel="stylesheet" href="Flexbox.CSS">
+  </head>
+
+  <!-- Flexbox -->
+  <body>
+    <h1>
+      Responsive Four Entry Layout Using a Flexbox
+    </h1>
+
+    <div class="myflexboxRow">
+        <div class="myFlexColumn" style="background-color: #aaa;">
+            <h2>Entry 1</h2>
+            <p><a href="https://www.google.com" target="blank">Go to Google!</a></p>
+        </div>
+
+        <div class="myFlexColumn" style="background-color: #bbb;">
+            <h2>Entry 2</h2>
+            <p><img src="Porsche.jpg" alt="Porsche 911" style="width:50%;"></p>
+        </div>
+
+        <div class="myFlexColumn" style="background-color: #ccc;">
+            <h2>Entry 3</h2>
+            <p><video width="50%" controls>
+              <source src="Road.mp4" type="video/mp4">
+            </video></p>
+        </div>
+
+        <div class="myFlexColumn" style="background-color: #ddd;">
+          <h2>Entry 4</h2>
+          <p>Click the button to get your coordinates</p>
+          <button onclick="getlocation()">Try It</button>
+
+          <p id="demo"></p>
+
+          <script>
+            var x = document.getElementById("demo");
+
+            function getlocation(){
+              if (navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition);
+              }
+            }
+            function showPosition(position){
+              x.innerHTML= "Latitude: " + position.coords.latitude + "<br>Longitude: "+position.coords.longitude;
+            }
+          </script>
+        </div>
+  </body>
+</html>
