@@ -1,0 +1,23 @@
+/* Exercise CSS Sheet */
+*{
+    box-sizing: border-box;
+}
+
+/*Container for flexboxes*/
+.myflexboxRow{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create four equal entries in myflexbox */
+.myflexboxColumn{
+    flex:32%;
+    padding: 20px;
+}
+
+/* Media Querry */
+@media screen and (max-width: 600px){
+    .myflexboxRow{
+        flex-direction: column;
+    }
+}
